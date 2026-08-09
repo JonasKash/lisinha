@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ─────────────────────────────── */
+/* Paleta vinho/bordô + dourado, extraída da embalagem real do produto (frasco/caixa Lisinha). */
+:root {
+  --bg:              #FFFFFF;
+  --surface:         #FBF6F3;
+  --surface-border:  #EAD9DD;
+
+  --brand:           #7A1638;
+  --brand-hover:     #5E1129;
+  --brand-muted:     rgba(122, 22, 56, 0.08);
+
+  --gold:            #C9A227;
+  --gold-muted:      rgba(201, 162, 39, 0.12);
+
+  --success:         #1E9E58;
+  --success-muted:   rgba(30, 158, 88, 0.1);
+
+  --text-1:          #241014;
+  --text-2:          #6B5359;
+  --text-3:          #9A868B;
+
+  --border:          #EAD9DD;
+  --border-strong:   #D9BFC5;
+
+  --shadow-sm: 0 1px 3px rgba(36, 16, 20, 0.08);
+  --shadow-md: 0 4px 16px rgba(36, 16, 20, 0.1);
+  --shadow-lg: 0 12px 32px rgba(36, 16, 20, 0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-pill: 25px;
+
+  --font: var(--font-display), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text-1);
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  ::selection { background: var(--brand); color: #fff; }
+
+  * { scrollbar-width: thin; scrollbar-color: var(--border-strong) transparent; }
+  *::-webkit-scrollbar { width: 6px; height: 6px; }
+  *::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
