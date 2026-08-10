@@ -10,12 +10,12 @@ export default function Header() {
           Lisinha
         </Link>
 
-        <a
-          href="#comprar"
+        <Link
+          href="/pedido"
           className="rounded-[var(--radius-pill)] bg-[color:var(--brand)] px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:bg-[color:var(--brand-hover)]"
         >
           Comprar
-        </a>
+        </Link>
       </div>
     </header>
   );
